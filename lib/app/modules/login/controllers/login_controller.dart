@@ -1,23 +1,15 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/sockets/src/socket_notifier.dart';
 
 class LoginController extends GetxController {
-  //TODO: Implement LoginController
+  RxBool cheked = false.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
+  TextEditingController phone = TextEditingController();
 
   @override
   void onClose() {
+    phone.dispose();
     super.onClose();
   }
-
-  void increment() => count.value++;
 }

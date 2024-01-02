@@ -19,19 +19,19 @@ class MyApp extends StatelessWidget {
       getPages: AppPages.routes,
     );
 
-    return FutureBuilder(
-      future: Future.delayed(const Duration(seconds: 5)),
-      builder: (context, snap) {
-        if (snap.connectionState == ConnectionState.waiting) {
-          return SplashScreen();
-        } else {
-          return GetMaterialApp(
-            title: "Application",
-            initialRoute: AppPages.INITIAL,
-            getPages: AppPages.routes,
-          );
-        }
-      },
-    );
+    // return FutureBuilder(
+    //   future: Future.delayed(const Duration(seconds: 5)),
+    //   builder: (context, snap) {
+    //     if (snap.connectionState == ConnectionState.waiting) {
+    //       return SplashScreen();
+    //     } else {
+    //       return GetMaterialApp(
+    //         title: "Application",
+    //         initialRoute: AppPages.INITIAL,
+    //         getPages: AppPages.routes,
+    //       );
+    //     }
+    //   },
+    // );
   }
 }
